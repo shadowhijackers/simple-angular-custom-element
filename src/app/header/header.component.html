@@ -1,0 +1,18 @@
+<header class="app-header__block">
+
+  <div>
+    <h1>{{title}}</h1>
+  </div>
+
+  <div>
+
+    <label>
+      <select class="app-header__select">
+        <option *ngFor="let item of items">{{item.name}}</option>
+      </select>
+    </label>
+
+    <button class="app-header__btn" (click)="btnHandler()">Click</button>
+  </div>
+
+</header>

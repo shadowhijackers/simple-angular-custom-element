@@ -1,0 +1,25 @@
+.app-header {
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rebeccapurple;
+    color: white;
+    padding-left: 16px;
+  }
+
+  &__select {
+    padding: 8px;
+    min-width: 100px;
+  }
+
+  &__btn {
+    margin: 16px;
+    padding: 8px;
+    min-width: 100px;
+    font-size: 15px;
+    border: 1px solid black;
+  }
+
+}

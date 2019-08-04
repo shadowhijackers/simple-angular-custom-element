@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="./app-header.js"></script>
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+<app-header title="ANGULAR CUSTOME HEADER ELEMENT"></app-header>
+<script>
+
+  const items = [];
+  const button = document.querySelector('app-header');
+
+  setValue();
+
+  button.addEventListener('action', (e) => {
+    alert(e.detail);
+    setValue();
+  });
+
+  function setValue() {
+    let option = {name: items.length > 0 ? 'Home-' + items.length.toString() : 'Home'}
+    items.push(option);
+    button.setAttribute('items', JSON.stringify(items));
+  }
+
+</script>
+</body>
+</html>

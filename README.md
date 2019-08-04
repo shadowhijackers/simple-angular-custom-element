@@ -1,27 +1,40 @@
-# SimpleAngularCustomeElement
+# Angular Custom Element
+    
+    1. Create an angular application without routing 
+        Ex: ng new simple-angular-custome-element
+    2. Go to the project 
+        Ex: cd simple-angular-custome-element/
+    3. Add the angular elements
+        Ex: ng add @angular/elements
+    4. Add the component 
+        Ex: ng g component header
+    5. Change the TS target version into ES2015
+        EX: "target": "es2015",                
+    6. Empty the Appcomponent of Bootstrap array in app module
+        EX: bootstrap: []
+    7. Create an Element by following
+        ngDoBootstrap() {
+            const headerElement = createCustomElement(HeaderComponent, {injector: this.injector});
+            customElements.define('app-header', headerElement);
+         }  
+    8. Take the build
+        EX: ng build --prod --output-hashing=none
+    9. Merge the ./dist/simple-angular-custome-element/runtime.js 
+                 ./dist/simple-angular-custome-element/polyfills.js 
+                 ./dist/simple-angular-custome-element/scripts.js 
+                 ./dist/simple-angular-custome-element/main.js   
+                       to 
+                       
+                  destination file
+                  
+                  ./custome-elments/app-header.js       
+                             
+    10. now call the element
+       Ex: <app-header title="ANGULAR CUSTOME HEADER ELEMENT"></app-header>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.4.
 
-## Development server
+>Note: Use ShodowDom View encapsulate if you the styles are conflicts 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Examples 
+   open the **custome-elements/index.html** file 
