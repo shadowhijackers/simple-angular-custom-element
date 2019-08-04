@@ -15,11 +15,11 @@
 <script>
 
   const items = [];
-  const button = document.querySelector('app-header');
+  const header = document.querySelector('app-header');
 
   setValue();
 
-  button.addEventListener('action', (e) => {
+  header.addEventListener('action', (e) => {
     alert(e.detail);
     setValue();
   });
@@ -27,7 +27,7 @@
   function setValue() {
     let option = {name: items.length > 0 ? 'Home-' + items.length.toString() : 'Home'}
     items.push(option);
-    button.setAttribute('items', JSON.stringify(items));
+    header.setAttribute('items', JSON.stringify(items));
   }
 
 </script>
