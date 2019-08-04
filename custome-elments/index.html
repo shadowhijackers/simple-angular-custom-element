@@ -17,15 +17,15 @@
   const items = [];
   const header = document.querySelector('app-header');
 
-  setValue();
+  addSelectOption();
 
   header.addEventListener('action', (e) => {
     alert(e.detail);
-    setValue();
+    addSelectOption();
   });
 
-  function setValue() {
-    let option = {name: items.length > 0 ? 'Home-' + items.length.toString() : 'Home'}
+  function addSelectOption() {
+    let option = {name: items.length > 0 ? 'Home-' + items.length.toString() : 'Home'};
     items.push(option);
     header.setAttribute('items', JSON.stringify(items));
   }
