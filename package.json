@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod --output-hashing=none",
-    "package": "cat ./dist/simple-angular-custome-element/runtime.js ./dist/simple-angular-custome-element/polyfills.js ./dist/simple-angular-custome-element/scripts.js ./dist/simple-angular-custome-element/main.js > ./custome-elments/app-header.js",
+    "package": "cat ./dist/simple-angular-custome-element/runtime.js ./dist/simple-angular-custome-element/polyfills.js ./dist/simple-angular-custome-element/scripts.js ./dist/simple-angular-custome-element/main.js > ./example/app-header.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
